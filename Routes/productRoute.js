@@ -1,8 +1,9 @@
 const express = require("express");
-const { route } = require("../DB/dbconnection");
+const { route } = require("../db/dbConnection");
 const router = express.Router();
-const con = require("../DB/dbconnection");
+const con = require("../db/dbConnection");
 
+// get all
 router.get("/", (req, res) => {
   try {
     con.query("SELECT * FROM products", (err, result) => {
@@ -22,7 +23,7 @@ router.get("/:id", (req, res) => {
     res.status(400).send(error);
   }
 });
-// get all products
+//post products
 router.post("/", (req, res) => {
   const {
     product_name,
