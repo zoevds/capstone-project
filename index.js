@@ -18,8 +18,8 @@ const flavoursRoute = require("./Routes/flavoursRoute");
 //   res.sendFile(__dirname + "/" + "index.html");
 // });
 
-app.use("/productRoute", productRoute);
-app.use("/userRoute", userRoute);
+app.use("/product", productRoute);
+app.use("/user", userRoute);
 app.use("/categories", categoriesRoute);
 app.use("/flavours", flavoursRoute);
 app.listen(app.get("port"), () => {
