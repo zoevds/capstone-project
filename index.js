@@ -18,7 +18,7 @@ const flavoursRoute = require("./Routes/flavoursRoute");
 //   res.sendFile(__dirname + "/" + "index.html");
 // });
 
-app.use("/product", productRoute);
+// app.use("/product", productRoute);
 app.use("/user", userRoute);
 app.use("/categories", categoriesRoute);
 app.use("/flavours", flavoursRoute);
