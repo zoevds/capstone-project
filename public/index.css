@@ -7,3 +7,9 @@
   display: flex;
   justify-content: center;
 }
+#userstable,
+#productstable,
+#categorytable,
+#flavourtable {
+  padding: 3rem;
+}
