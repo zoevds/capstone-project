@@ -14,7 +14,7 @@ router.get("/", (req, res) => {
     console.log(error);
   }
 });
-// Gets one products
+// Gets one product
 router.get("/:id", (req, res) => {
   try {
     res.send({ id: req.params.id });
@@ -23,7 +23,7 @@ router.get("/:id", (req, res) => {
     res.status(400).send(error);
   }
 });
-//post products
+//add products
 router.post("/", (req, res) => {
   const {
     product_name,
