@@ -3,7 +3,11 @@
   margin: 0%;
   box-sizing: border-box;
 }
-#mainheading {
+#mainheading1,
+#userheading1,
+#productsheading1,
+#categoriesheading1,
+#flavourheading1 {
   display: flex;
   justify-content: center;
 }
@@ -12,4 +16,5 @@
 #categorytable,
 #flavourtable {
   padding: 3rem;
+  margin: 0%;
 }
