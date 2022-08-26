@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 body {
+  margin-top: 2rem;
   padding: 6rem;
   background-color: darkgray;
 }
