@@ -11,6 +11,8 @@ body {
 #mainheading1 {
   font-size: 4rem;
   font-family: "Bebas Neue", cursive;
+  display: flex;
+  justify-content: center;
 }
 #userheading1,
 #productsheading1,
