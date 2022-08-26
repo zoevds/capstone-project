@@ -3,6 +3,9 @@
   margin: 0%;
   box-sizing: border-box;
 }
+body {
+  padding: 3rem;
+}
 #mainheading1,
 #userheading1,
 #productsheading1,
@@ -11,10 +14,10 @@
   display: flex;
   justify-content: center;
 }
-#userstable,
+/* #userstable,
 #productstable,
 #categorytable,
 #flavourtable {
   padding: 3rem;
   margin: 0%;
-}
+} */
