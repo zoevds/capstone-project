@@ -15,6 +15,8 @@ body {
 #flavourheading1 {
   display: flex;
   justify-content: center;
+  font-size: 2rem;
+  font-family: "Bebas Neue", cursive;
 }
 /* #userstable,
 #productstable,
