@@ -5,11 +5,12 @@
 }
 body {
   margin-top: 0%;
-
+  padding: 6rem;
   background-color: darkgray;
 }
 #mainheading1 {
   font-size: 4rem;
+  font-family: "Bebas Neue", cursive;
 }
 #userheading1,
 #productsheading1,
@@ -20,10 +21,10 @@ body {
   font-size: 2rem;
   font-family: "Bebas Neue", cursive;
 }
-#userstable,
+/* #userstable,
 #productstable,
 #categorytable,
 #flavourtable {
-  padding: 6rem;
+ 
   margin: 0%;
-}
+} */
