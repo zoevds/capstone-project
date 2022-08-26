@@ -4,11 +4,13 @@
   box-sizing: border-box;
 }
 body {
-  margin-top: 2rem;
-  padding: 6rem;
+  margin-top: 0%;
+
   background-color: darkgray;
 }
-#mainheading1,
+#mainheading1 {
+  font-size: 4rem;
+}
 #userheading1,
 #productsheading1,
 #categoriesheading1,
@@ -18,10 +20,10 @@ body {
   font-size: 2rem;
   font-family: "Bebas Neue", cursive;
 }
-/* #userstable,
+#userstable,
 #productstable,
 #categorytable,
 #flavourtable {
-  padding: 3rem;
+  padding: 6rem;
   margin: 0%;
-} */
+}
