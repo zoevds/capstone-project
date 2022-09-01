@@ -24,10 +24,11 @@ router.get("/:id", (req, res) => {
 });
 // post flavours
 router.post("/", (req, res) => {
-  const { flavour_name, flavour_desc } = req.body;
+  const { flavour_name, flavour_desc, flavour_imgURL, flavour_price } =
+    req.body;
   try {
     con.query(
-      `INSERT into flavours (flavour_name,flavour_desc) values ('${flavour_name}', '${flavour_desc}')`,
+      `INSERT into flavours (flavour_name,flavour_desc, flavour_imgURL,flavour_price) values ('${flavour_name}', '${flavour_desc}','${flavour_imgURL}', '${flavour_price}')`,
       (err, result) => {
         if (err) throw err;
         res.send(result);
@@ -39,10 +40,11 @@ router.post("/", (req, res) => {
 });
 // PUT - EDIT CATEGORIES
 router.put("/:id", (req, res) => {
-  const { flavour_name, flavour_desc } = req.body;
+  const { flavour_name, flavour_desc, flavour_imgURL, flavour_price } =
+    req.body;
   try {
     con.query(
-      `UPDATE flavours SET flavour_name="${flavour_name}",flavour_desc="${flavour_desc}"WHERE flavour_id=${req.params.id}`,
+      `UPDATE flavours SET flavour_name="${flavour_name}",flavour_desc="${flavour_desc}",flavour_imgURL="${flavour_imgURL}",flavour_price="${flavour_price}"WHERE flavour_id=${req.params.id}`,
       (err, result) => {
         if (err) throw err;
         res.send(result);
