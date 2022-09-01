@@ -16,7 +16,13 @@ router.get("/", (req, res) => {
 // Gets one flavour
 router.get("/:id", (req, res) => {
   try {
-    res.send({ id: req.params.id });
+    con.query(
+      `SELECT * FROM flavours WHERE flavour_id = ${req.params.id} `,
+      (err, result) => {
+        if (err) throw err;
+        res.send(result);
+      }
+    );
   } catch (error) {
     console.log(error);
     res.status(400).send(error);
