@@ -41,10 +41,11 @@ router.post("/", (req, res) => {
     user_order_date,
     user_password,
     user_type,
+    user_gender,
   } = req.body;
   try {
     con.query(
-      `insert into users (user_fullname,user_email,user_billing_address,user_shipping_address,user_order_date,user_password,user_type) values ('${user_fullname}','${user_email}', '${user_billing_address}','${user_shipping_address}','${user_order_date}', '${user_password}','${user_type}')`,
+      `insert into users (user_fullname,user_email,user_billing_address,user_shipping_address,user_order_date,user_password,user_type,user_gender) values ('${user_fullname}','${user_email}', '${user_billing_address}','${user_shipping_address}','${user_order_date}', '${user_password}','${user_type}','${user_gender}')`,
       (err, result) => {
         if (err) throw err;
         res.send(result);
@@ -65,12 +66,13 @@ router.put("/:id", (req, res) => {
     user_order_date,
     user_password,
     user_type,
+    user_gender,
   } = req.body;
   const salt = bcrypt.genSaltSync(10);
   const hash = bcrypt.hashSync(user_password, salt);
   try {
     con.query(
-      `UPDATE users SET user_fullname="${user_fullname}",user_email="${user_email}",user_billing_address="${user_billing_address}",user_shipping_address="${user_shipping_address}",user_order_date="${user_order_date}",user_password="${user_password}", user_type="${user_type}" WHERE user_id="${req.params.id}"`,
+      `UPDATE users SET user_fullname="${user_fullname}",user_email="${user_email}",user_billing_address="${user_billing_address}",user_shipping_address="${user_shipping_address}",user_order_date="${user_order_date}",user_password="${user_password}", user_type="${user_type}", user_gender="${user_gender}" WHERE user_id="${req.params.id}"`,
       (err, result) => {
         if (err) throw err;
         res.send(result);
